@@ -16,7 +16,7 @@ public class HdfsUtil {
     public void init() throws IOException {
         Configuration conf = new Configuration();
         // 配置HDFS URL
-        conf.set("fs.defaultFS", "hdfs://master:9000");
+        conf.set("fs.defaultFS", "hdfs://localhost:9000");
         // 设置副本的数量
         conf.set("dfs.replication", "1");
         // 构建FileSystem对象

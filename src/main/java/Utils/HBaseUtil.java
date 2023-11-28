@@ -26,7 +26,8 @@ public class HBaseUtil {
         Configuration conf = new Configuration();
         //指定hbase使用的zk地址
         //注意：需要在执行hbasejava代码的机器上配置zk和hbase集群的主机名和ip的映射关系
-        conf.set("hbase.zookeeper.quorum","master:2181");
+        conf.set("hbase.zookeeper.quorum","localhost:2181");
+        conf.set("hbase.client.port","16010");
         //指定hbase在hdfs上的根目录
         conf.set("hbase.rootdir","hdfs://master:9000/hbase");
         //创建HBase数据库链接

@@ -22,9 +22,12 @@ public class DataImport {
 
     private final static Logger logger = LoggerFactory.getLogger(DataImport.class);
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws Exception {
+      //  HBaseUtil.createTable("article","id","title","author","describe","content");
+
+
         // 从本地文件读取文章数据
-        String filePath = "D:\\Hadoop\\es\\总数据\\总数据.xlsx";
+        String filePath = "/Users/shinemost/Documents/data.xlsx";
         try {
             Workbook workbook = WorkbookFactory.create(new File(filePath));
             Sheet sheet = workbook.getSheetAt(0);

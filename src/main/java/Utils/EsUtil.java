@@ -35,9 +35,7 @@ public class EsUtil {
         client = new RestHighLevelClient(
                 //这里的代码其实就是低级别客户端的代码
                 RestClient.builder(
-                                new HttpHost("192.168.80.128",9200,"http"),
-                                new HttpHost("192.168.80.128",9200,"http"),
-                                new HttpHost("192.168.80.128",9200,"http"))
+                                new HttpHost("localhost",9200,"http"))
                         .setHttpClientConfigCallback(new RestClientBuilder.HttpClientConfigCallback() {
                             @Override
                             public HttpAsyncClientBuilder customizeHttpClient(
